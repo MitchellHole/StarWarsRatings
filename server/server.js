@@ -1,6 +1,8 @@
 import db from './models';
 import app from './app';
 
+require('dotenv').config();
+
 const PORT = process.env.PORT || 9000;
 (async () => {
   try {

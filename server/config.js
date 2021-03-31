@@ -1,23 +1,9 @@
+require('dotenv').config('../.env');
+
 module.exports = {
-  development: {
-    username: 'mitchellhole',
-    password: null,
-    database: 'StarWarsRatings',
-    host: '127.0.0.1',
-    dialect: 'postgres',
-  },
-  test: {
-    username: 'postgres',
-    password: null,
-    database: 'database_test',
-    host: '127.0.0.1',
-    dialect: 'postgres',
-  },
-  production: {
-    username: 'postgres',
-    password: null,
-    database: 'database_production',
-    host: 'starwarsratings.cbm3ambdxnuj.us-east-2.rds.amazonaws.com',
-    dialect: 'postgres',
-  },
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT
 };
